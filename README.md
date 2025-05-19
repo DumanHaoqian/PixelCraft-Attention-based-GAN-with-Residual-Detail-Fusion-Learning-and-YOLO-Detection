@@ -9,6 +9,7 @@ The proposed model, AttnDetailNet, addresses the issue of generating images with
 ## Key Components
 
 ### 1. MainNet (UNetGeneratorPlus)
+![mainnet](mainet.png)
 A U-Net-based architecture designed for global structure and content generation:
 - **Deeper Encoding-Decoding Paths**: Captures features at multiple scales.
 - **Residual Blocks at Bottleneck**: Mitigates vanishing gradient issues.
@@ -16,6 +17,7 @@ A U-Net-based architecture designed for global structure and content generation:
 - **Skip Connections**: Preserves fine spatial details.
 
 ### 2. DetailNet
+![detailnet](detailnet.png)
 A lightweight complementary network for high-frequency detail refinement:
 - **Shallow Encoder**: Limited downsampling (factor of 4) to retain spatial information critical for fine details.
 - **Residual and Attention Processing**: Enhances feature representation while ensuring coherence in detail generation.
@@ -25,6 +27,7 @@ A lightweight complementary network for high-frequency detail refinement:
 Combines MainNet and DetailNet outputs through a learnable weight parameter (α) to balance global structure and fine detail contributions.
 
 ### 4. Discriminator (PatchDiscriminator)
+![patchdiscriminator](patchdiscirminator.png)
 A fully-convolutional discriminator that evaluates image patches instead of entire images:
 - **Markovian Design**: Focuses on local textures and details.
 - **Instance Normalization**: Handles style variations.
