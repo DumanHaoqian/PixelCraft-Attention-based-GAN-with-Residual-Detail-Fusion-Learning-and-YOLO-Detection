@@ -4,7 +4,7 @@
 
 ## Overview
 The proposed model, AttnDetailNet, addresses the issue of generating images with insufficient details such as cars or people, while maintaining the overall style of the target data. Inspired by residual learning approaches, the model incorporates a **DetailNet** to refine the output of the **MainNet**, using residuals between the generated images and target images to improve accuracy.
-
+![AttnDetailGAN](gan.png)
 ## Key Components
 
 ### 1. MainNet (UNetGeneratorPlus)
