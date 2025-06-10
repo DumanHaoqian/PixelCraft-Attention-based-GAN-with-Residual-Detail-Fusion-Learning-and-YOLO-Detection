@@ -4,7 +4,7 @@
 # Attention-based GAN with Residual Detail Fusion Learning (AttnDetailNet)
 
 ## Overview
-We Got 95/100 in This Project!
+**We Got 95/100 in This Project!**
 
 The proposed model, AttnDetailNet, addresses the issue of generating images with insufficient details such as cars or people, while maintaining the overall style of the target data. Inspired by residual learning approaches, the model incorporates a **DetailNet** to refine the output of the **MainNet**, using residuals between the generated images and target images to improve accuracy.
 
